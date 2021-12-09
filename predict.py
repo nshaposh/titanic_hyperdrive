@@ -1,8 +1,9 @@
 import json
 import numpy as np
 
-def predict(compiled_model, payload):
+def predict(artifact_list, payload):
     payload_dict = json.loads(payload)
+    model = artifact_list[0]
 
     feature_names = ["Pclass","Age","Parch","Fare","gen"]
 
